@@ -536,3 +536,8 @@ type PaychInfo struct {
 	Addr      string
 	Direction PaychDir
 }
+
+type GCCid struct {
+	Cid  cid.Cid
+	Size int64
+}

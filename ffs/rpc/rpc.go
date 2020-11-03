@@ -516,7 +516,7 @@ func (s *RPC) Stage(srv RPCService_StageServer) error {
 
 	go receiveFile(srv, writer)
 
-	c, err := s.hot.Add(srv.Context(), reader)
+	c, err := s.hot.Stage(srv.Context(), reader)
 	if err != nil {
 		return fmt.Errorf("adding data to hot storage: %s", err)
 	}
